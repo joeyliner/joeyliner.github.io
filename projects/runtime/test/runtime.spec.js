@@ -42,8 +42,9 @@ describe('runtime', function() {
                 expect(hudSpy.called, 'See TODO 1 - Adding The Heads-Up Display').to.be.true;
                 // expect(viewSpy.calledWith('hud'), 'must pass hud object to view.addChild() to add it to the view').to.be.true;
                 done();
+                
             });
-            
+                        
             it('TODO 2: should create a background with opspark.makeBackground', function(done) {
                 // this should be 2 to account for calling it later in this test spec
                 expect(bgSpy.called, 'See TODO 2 - Adding A Background').to.be.true;
