@@ -22,6 +22,7 @@ var background = function (window) {
 
         // container which will be returned
         var background;
+        var  backgroundBottom;
         
         // ANIMATION VARIABLES HERE:
         
@@ -39,9 +40,15 @@ var background = function (window) {
             
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'purple');
-            background.addChild(backgroundFill);
-            
+
+             backgroundBottom = draw.rect(canvasWidth,groundY,'black');
+             backgroundBottom.x = 0;
+             backgroundBottom.y = groundY +0;
+            background.addChild( backgroundBottom)
+             backgroundBottom.scaleX = canvasWidth;
+             backgroundBottom.scaleY = canvasHeight;
+             backgroundBottom.x= backgroundBottom.x+1;
+
             // TODO: 3 - Add a moon and starfield   
             
                 

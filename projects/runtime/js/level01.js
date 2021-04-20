@@ -27,22 +27,23 @@ var level01 = function (window) {
 
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
-        var hitZoneSize = 0;
-        var damageFromObstacle = 10;
-        var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-        sawBladeHitZone.x = 500;
-        sawBladeHitZone.y = 550;
-        game.addGameItem(sawBladeHitZone);
-        var obstacleImage = draw.bitmap('img/sawblade.png');
-        sawBladeHitZone.addChild(obstacleImage);
-         var hitZoneSize = 0;
-        var damageFromObstacle = 10;
-        var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-        sawBladeHitZone.x = 1000;
-        sawBladeHitZone.y = 550;
-        game.addGameItem(sawBladeHitZone);
-        var obstacleImage = draw.bitmap('img/sawblade.png');
-        sawBladeHitZone.addChild(obstacleImage);
+        
+        function createSawBlade (x, y){
+            var hitZoneSize = 25;
+            var damageFromObstacle = 10;
+            var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+            sawBladeHitZone.x = x;
+            sawBladeHitZone.y = y;
+            game.addGameItem(sawBladeHitZone);
+
+            var obstacleImage = draw.bitmap('img/sawblade.png');
+            sawBladeHitZone.addChild(obstacleImage);
+            obstacleImage.x = -25;
+            obstacleImage.y = -25;
+        }
+
+        createSawBlade(300, groundY - 100);
+
         // DO NOT EDIT CODE BELOW HERE
     }
 };
